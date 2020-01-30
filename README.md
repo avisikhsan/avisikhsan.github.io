@@ -6,4 +6,4 @@ Hari ini kita akan belajar:
   - membuat akun github
 2. Menginstall nodejs
 
-Kunjungi juga situs berikut [Link] (https://www.google.com)
+Kunjungi juga situs berikut [Link](https://www.google.com)
