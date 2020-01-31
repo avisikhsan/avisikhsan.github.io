@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form rumus</title>
+    <style>
+        {
+            box-sizzing: border-box
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aqua;
+        }
+        header {
+            background-color: rgb(23, 207, 198);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(24, 23, 23);
+        }
+        form.luaspersegi {
+            float: left;
+            padding: 14px 16px;
+        }
+        form.luaspersegipanjang {
+            float: left;
+            padding: 14px 16px;
+        }
+        form.luassegitiga {
+            float: left;
+            padding: 14px 16px;
+        }
+        form.luaslingkaran {
+            float: left;
+            padding: 14px 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Kalkulator Malas Ngitung</h2>
+    </header>
+
+    <!-- Rumus Persegi -->
+    <form class="luaspersegi">
+        <p><strong>Rumus Luas Persegi</strong></p>
+        Sisi Atas <br>
+        <input type="text" id="sisiatas">
+            <br>
+        Sisi Samping
+        <br>
+        <input type="text" id="sisisamping">
+               <br><br>
+        <input type="button" onclick="tampilkanhasil()" value="Tampilkan Hasil">
+        <p id="hasil"></p>
+        <script>
+        function tampilkanhasil() {
+            var sisiatas = document.getElementById("sisiatas").value;
+            var sisisamping = document.getElementById("sisisamping").value;
+            document.getElementById("hasil").innerHTML = sisiatas*sisisamping;
+        }
+        </script>
+    </form>
+     
+
+    <!-- Rumus Persegi Panjang -->
+    <form class="luaspersegipanjang">
+        <p><strong>Rumus Luas Persegi Panjang</strong></p>
+        <label for="panjang">Panjang</label> 
+        <br>
+        <input type="text" id="panjang">
+            <br>
+        <label for="lebar">Lebar</label>
+        <br>
+        <input type="text" id="lebar">
+               <br><br>
+        <input type="button" onclick="persegipanjang()" value="Tampilkan Hasil">
+        <p id="hasilpersegipanjang"></p>
+        <script>
+        function persegipanjang() {
+            var panjang = document.getElementById("panjang").value;
+            var lebar = document.getElementById("lebar").value;
+            document.getElementById("hasilpersegipanjang").innerHTML = panjang*lebar;
+        }
+        </script>
+    </form>
+       
+
+    <!-- Rumus Segitiga -->
+    <form class="luassegitiga">
+        <p><strong>Rumus Luas Segitiga</strong></p>
+        <label for="alas">Alas</label> 
+        <br>
+        <input type="text" id="alas">
+            <br>
+        <label for="tinggi">Tinggi</label>
+        <br>
+        <input type="text" id="tinggi">
+               <br><br>
+        <input type="button" onclick="segitiga()" value="Tampilkan Hasil">
+    <p id="hasilsegitiga"></p>
+    <script>
+    function segitiga() {
+            var alas = document.getElementById("alas").value;
+            var tinggi = document.getElementById("tinggi").value;
+            document.getElementById("hasilsegitiga").innerHTML = (alas*tinggi)/2;
+        }
+        </script>
+    </form>
+        
+
+    <!-- Rumus Lingkaran -->
+    <form class="luaslingkaran">
+        <p><strong>Rumus Luas Lingkaran</strong></p>
+        <label for="phi">Phi (diisi 3.14)</label> 
+        <br>
+        <input type="text" id="phi">
+            <br>
+        <label for="jarijari">Jari-Jari</label>
+        <br>
+        <input type="text" id="jarijari">
+               <br><br>
+        <input type="button" onclick="lingkaran()" value="Tampilkan Hasil">
+    <p id="hasillingkaran"></p>
+    <script>
+        function lingkaran() {
+            var phi = document.getElementById("phi").value;
+            var jarijari = document.getElementById("jarijari").value;
+            document.getElementById("hasillingkaran").innerHTML = phi*(jarijari*jarijari);
+        }
+        </script>
+    </form>
+    
+    
+</body>
+</html>
